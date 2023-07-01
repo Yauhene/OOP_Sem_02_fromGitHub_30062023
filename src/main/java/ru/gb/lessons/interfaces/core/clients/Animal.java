@@ -125,9 +125,21 @@ public class Animal {
         this.records = records;
     }
 
-    @Override
+   /* @Override
     public String toString() {
         //todo Грамотно переделать этот метод!
         return super.toString();
+    }*/
+
+    @Override
+    public String toString() {
+        return CLASS_NAME + "{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", numberOfLimbs=" + numberOfLimbs +
+                ", registrationDate=" + registrationDate +
+                ", owner=" + owner +
+                ", records=" + records +
+                '}';
     }
 }
