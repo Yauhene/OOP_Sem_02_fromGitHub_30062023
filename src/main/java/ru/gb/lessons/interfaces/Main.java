@@ -1,7 +1,9 @@
 package ru.gb.lessons.interfaces;
 
 import ru.gb.lessons.interfaces.core.clients.home.impl.Cat;
+import ru.gb.lessons.interfaces.core.clients.home.impl.Dog;
 import ru.gb.lessons.interfaces.core.clients.owners.Owner;
+import ru.gb.lessons.interfaces.core.clients.wild.impl.Duck;
 import ru.gb.lessons.interfaces.core.clients.wild.impl.WildCat;
 
 import java.time.LocalDate;
@@ -18,7 +20,7 @@ import java.time.LocalDate;
 public class Main {
     public static void main(String[] args) {
         Cat homeCat =
-                new Cat(2, "Tom", 4, LocalDate.of(2022, 4,13), new Owner("Ivanov Ivan"));
+                new Cat(2, "Tom", 4, LocalDate.of(2022, 4, 13), new Owner("Ivanov Ivan"));
 
         WildCat wildCat =
                 new WildCat(
@@ -26,5 +28,17 @@ public class Main {
 
         homeCat.hunt();
         wildCat.hunt();
+
+        Dog dog = new Dog();
+        dog.setName("Barbos");
+
+
+        System.out.println(homeCat);
+        System.out.println(dog);
+
+        Duck greenNeck = new Duck();
+        greenNeck.fly();
+
+        wildCat.fly();
     }
 }

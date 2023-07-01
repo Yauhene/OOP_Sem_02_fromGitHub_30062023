@@ -6,20 +6,17 @@ import ru.gb.lessons.interfaces.core.clients.wild.WildAnimal;
 
 import java.time.LocalDate;
 
-/**
- * Одна из реализаций дикого животного
- */
-public class WildCat extends WildAnimal implements Flyable {
-    public WildCat() {
+public class Duck extends WildAnimal implements Flyable {
+    public Duck() {
     }
 
-    public WildCat(int id, int numberOfLimbs, LocalDate registrationDate, Owner owner) {
+    public Duck(int id, int numberOfLimbs, LocalDate registrationDate, Owner owner) {
         super(id, numberOfLimbs, registrationDate, owner);
     }
 
     @Override
     public int fly() {
-        System.out.println(CLASS_NAME + " летит только с пинка, увы!");
-        return 0;
+        System.out.println(CLASS_NAME + " летит со скоростью 15 км/");
+        return 15;
     }
 }

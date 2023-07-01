@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class Animal {
     protected final String CLASS_NAME = "The " + getClass().getSimpleName();
-
+// Поля класса отвечают за СОСТОЯНИЕ объекта
     protected int id; //идентификатор животного для хранения в БД
     protected String name; // кличка животного
     protected int numberOfLimbs; //количество конечностей
@@ -33,14 +33,15 @@ public class Animal {
         this.records = new ArrayList<>();
     }
 
+    // Методы класса отвечают за ПОВЕДЕНИЕ объекта
     protected void addRecord(Record record) {
         //todo реализовать
     }
 
-    public void fly() {
-        System.out.println(CLASS_NAME + " flying.");
-    }
-
+    /* public void fly() {
+         System.out.println(CLASS_NAME + " flying.");
+     }
+ */
     public void swim() {
         System.out.println(CLASS_NAME + " swims.");
     }
